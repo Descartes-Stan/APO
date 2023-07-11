@@ -152,3 +152,8 @@ class APO:
             B = self.select_with_ucb(C)
         p_hat = max(B, key=lambda p: self.metric_func(p, self.sample_dataset))
         return p_hat
+        
+    def contrast_res(self):
+        f1_init = metric_func(self.prompt, self.mini_dataset)
+        f1_apo = metric_func(self.p_hat, self.mini_dataset)
+    
