@@ -17,3 +17,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     print(args)
     engine = APO(args)
+    res = engine.automatic_prompt_optimization()
